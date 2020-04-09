@@ -10,6 +10,10 @@ class UserHolder(val itemUserBinding: ItemUserBinding, var repository: UserRepos
     RecyclerView.ViewHolder(itemUserBinding.root), View.OnLongClickListener {
     var user : User? = null
 
+    init {
+        itemView.setOnLongClickListener(this)
+    }
+
     fun bind(user: User){
         this.user = user
         itemUserBinding.user = user
