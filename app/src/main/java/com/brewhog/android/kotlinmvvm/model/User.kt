@@ -8,7 +8,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(indices = [Index("email", "password", unique = true)])
-data class User (var email: String, var password: String) : BaseObservable() {
+data class User (var email: String, var password: String) {
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
